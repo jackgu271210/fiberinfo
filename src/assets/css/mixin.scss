@@ -1,0 +1,11 @@
+@mixin title {
+            font-size: .3rem;
+            font-weight: bold;
+        }
+@mixin ellipse {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+    
+        

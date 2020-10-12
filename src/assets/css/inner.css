@@ -1,0 +1,394 @@
+/*.foot_fixed {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}*/
+.inner_header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	color: #fff;
+	padding: 0 .28rem;
+	box-sizing: border-box;
+	font-size: .4rem;
+	background-color: #0493dc;
+}
+.inner_header a {
+	display: block;
+	color: #fff;
+}
+.inner_header .back {
+	width: .8rem;
+	height: .6rem;
+	line-height: .6rem;
+	font-size: .4rem;
+	transform: rotateY(180deg);
+}
+.inner_header span , .inner_header i {
+	display: block;
+}
+.inner_header .header_ti {
+	flex: 1
+}
+.inner_header .header_r {
+	width: .8rem;
+	height: .6rem;
+	line-height: .6rem;
+	border-radius: .1rem;
+}
+
+/*登录页面*/
+
+.inner_header .login {
+	border: none;
+}
+.inner_header .login i {
+	font-size: .5rem;
+}
+.inner_header .ali_cen {
+	text-align: center;
+}
+
+
+.login_box .controls {
+	position: relative;
+	margin: .4rem 0;
+	color: #666;
+}
+.login_box .controls input {
+	padding: .2rem .1rem .2rem .8rem;
+	box-sizing: border-box;
+}
+.login_box .controls label {
+	position: absolute;
+	left: .2rem;
+	top: .2rem;
+	z-index: 10;
+}
+.login_box .controls label i {
+	font-size: .32rem;
+}
+.login_box .controls .form_control {
+	display: block;
+	font-size: .26rem;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0.08rem;
+}
+.login_box .form_reg {
+	display: flex;
+	justify-content: space-between;
+}
+.login_box .reg_l {
+	width: 58%;
+} 
+.login_box .reg_r {
+	width: 40%;
+} 
+.login_box .radio_item {
+	display: inline-block;
+	margin-right: .4rem;
+}
+.login_box .radio_item span {
+	display: inline-block;
+}
+.login_box .radio_wrap {
+	position: relative;
+	width: .4rem;
+	height: .4rem;
+	border-radius: 100%;
+	background-color: #adadad;
+	margin: .1rem;
+	border: 1px solid #adadad;
+}
+.login_box .radio_wrap label {
+	display: block;
+    width: .4rem;
+    height: .4rem;
+    border-radius: 100px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+}
+.radio_wrap input[type=radio]:checked+label {
+	width: .4rem;
+	height: .4rem;
+	top: 0px;
+	left: 0px;
+}
+.radio_item input {
+	display: inline-block;
+	width: .4rem;
+	height: .4rem;
+}
+.login_box .control_btn {
+	margin: .3rem 0;
+}
+.login_box .btn_login {
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	text-align: center;
+	border-radius: .1rem;
+	color: #fff;
+	background-color: #015cc8;
+	font-size: .3rem;
+	font-family:"Microsoft Yahei";
+}
+
+
+/*搜索页面*/
+
+.inner_search {
+	border: 1px solid #ccc;
+	border-radius: .2rem;
+}
+.inner_search #search_sel {
+	width: .8rem;
+	height: 100%;
+}
+.inner_search .sel_wrap {
+	display: inline-block;
+	width: 1.2rem;
+	height: .72rem;
+	font-size: .28rem;
+	padding-left: .3rem;
+	border-radius: none;
+	text-align: center;
+}
+.inner_search .sel_item {
+	width: 1.2rem;
+	height: .72rem;
+	text-align: center;
+}
+
+.tip_box {
+	margin-top: .3rem;
+}
+
+.tip_box a{
+	display: block;
+	padding: 0 .2rem;
+	height: .46rem;
+	line-height: .46rem;
+	border: 1px solid #ccc;
+	color: #666;
+	font-size: .26rem;
+	margin: 0 .2rem .2rem 0 ;
+	float: left;
+}
+
+
+/*导航页面*/
+
+.nav_box .nav_list ul li {
+	float: left;
+	width: 25%;
+}
+.nav_box .nav_list ul li a {
+	display: block;
+}
+.nav_box .nav_list .nav_item {
+	padding: .1rem .25rem;
+	text-align: center;
+}
+.nav_box .nav_item img ,  .nav_box .nav_item span {
+	display: block; 
+}
+.nav_box .nav_item img {
+	width: 100%;
+}
+.nav_box .nav_item span {
+	height: .6rem;
+	line-height: .6rem;
+}
+
+.recommend_box ul li {
+	float: left;
+	width: 23%;
+	margin: 0 1%;
+}
+.recommend_box .reco_pic img {
+	display: block;
+	width: 100%;
+}
+.recommend_box .reco_txt {
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+}
+
+/*联系客服*/
+
+.service_box .ser_list ul li {
+	float: left;
+	width: 25%;
+}
+.service_box .ser_list ul li a {
+	display: block;
+}
+.service_box .ser_item {
+	padding: .2rem .1rem;
+	text-align: center;
+}
+.service_box .ser_item i , .service_box .ser_item span {
+	display: block;
+}
+.service_box .ser_item i {
+	width: 100%;
+	height: .8rem;
+	font-size: .6rem;
+}
+.service_box .ser_item span {
+	height: .6rem;
+	line-height: .6rem;
+}
+
+.controls {
+    position: relative;
+    margin: .4rem 0;
+    color: #666;
+}
+
+.controls label {
+    position: absolute;
+    left: .2rem;
+    top: .2rem;
+    z-index: 10;
+}
+.controls label i {
+	font-size: .3rem;
+}
+
+.controls .form_control {
+    display: block;
+    font-size: .26rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.08rem;
+}
+.controls input {
+    padding: .2rem .1rem .2rem .8rem;
+    box-sizing: border-box;
+}
+.controls #canvas {
+	width: 40%;
+	height: .7rem;
+}
+.controls #remake {
+	width: 100%;
+	height: 3rem;
+	padding-left: .8rem;
+	box-sizing: border-box;
+	font-family:"微软雅黑";
+}
+.controls .msg_label {
+    position: absolute;
+    left: .2rem;
+    top: .36rem;
+    z-index: 10;
+}
+.control_group .control_btn button {
+	height: .8rem;
+	line-height: .8rem;
+	font-size: .3rem;
+	border-radius: .2rem;
+	color: #fff;
+}
+.control_group .control_btn .btn_submit {
+	background-color: #005dc9;
+}
+.control_group .control_btn .btn_reset {
+	background-color: #666;
+}
+
+
+/*短信行情*/
+
+.adv_cont p i {
+	font-style: normal;
+	font-weight: bold;
+	color: #005dc9;
+}
+.control_group .control_btn1 {
+	width: 2rem;
+	margin: .4rem auto;
+}
+
+.control_group .control_btn1 button {
+	margin: 0;
+}
+.adv_con p {
+	font-size: .26rem;
+}
+
+.text_box .text_list ul li {
+	margin: .2rem 0;
+}
+
+.text_box .text_list dl dt {
+	margin-bottom: .1rem;
+	font-weight: bold;
+	color: #005dc9;
+}
+
+
+/*注册*/
+
+.regi_form {
+	width: 80%;
+	margin: 0 auto;
+}
+.control_group .controls {
+	position: relative;
+}
+.control_group .controls .pwdBtnShow {
+	position: absolute;
+	right: .3rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.control_group .controls .pwdBtnShow i {
+	font-size: .3rem;
+	color: #999;
+}
+.controls input {
+	display: inline-block;
+    font-size: .26rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.08rem;
+}
+.controls1 input {
+	padding: .2rem .4rem;
+}
+
+.form_nav {
+	overflow: hidden;
+}
+.form_nav .form_ti {
+	height: 1rem;
+	padding: .2rem .56rem;
+	line-height: 1rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.form_nav .form_ti.on {
+	color: #005dc9;
+}
+.regi_form .regi_form1 {
+	display: none;
+}
+.regi_form .regi_form1.active {
+	display: block;
+}
