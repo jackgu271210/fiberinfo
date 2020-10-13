@@ -135,7 +135,10 @@ export default {
       border: 1px solid #ccc;
     }
     input {
-      padding: 0.3rem 0.1rem 0.3rem 0.8rem;
+      padding: 0.1rem;
+      height: .7rem;
+      line-height: .7rem;
+      font-size: .26rem;
       box-sizing: border-box;
     }
     .btn {

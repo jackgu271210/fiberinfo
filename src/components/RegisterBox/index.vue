@@ -77,27 +77,169 @@
                 </li>
               </ul>
             </div>
-            <div class="reg_type radio_wrap">
+            <div class="reg_type">
               <div class="title">注册类型</div>
-              <div
-                class="radio_item"
-                v-for="(item, index) in radios"
-                :key="item.id"
-              >
-                <span class="radio" :class="{ on: item.isChecked }"></span>
-                <input
-                  v-model="radio"
-                  type="radio"
-                  class="input_radio"
-                  :value="item.value"
-                  :checked="item.isChecked"
-                  @click="check(index)"
-                />
-                {{ item.label }}
+              <div class="radio_wrap">
+                <div
+                  class="radio_item"
+                  v-for="(item, index) in user_radios"
+                  :key="item.id"
+                >
+                  <span class="radio" :class="{ on: item.isChecked }"></span>
+                  <input
+                    v-model="radio"
+                    type="radio"
+                    class="input_radio"
+                    :value="item.value"
+                    :checked="item.isChecked"
+                    @click="check(index)"
+                  />
+                  {{ item.label }}
+                </div>
               </div>
             </div>
+            <div class="reg_btn">
+              <button class="btn">注册</button>
+            </div>
           </nut-tab-panel>
-          <nut-tab-panel tab-title="免费注册个人会员">页签2</nut-tab-panel>
+          <nut-tab-panel tab-title="免费注册个人会员">
+            <div class="individual_reg">
+              <div class="title">个人登陆信息</div>
+              <div class="sub_ti">
+                个人注册仅限于求职，如需推广产品请注册企业用户
+              </div>
+              <ul>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 登陆用户名: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 登陆密码: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 确认密码: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 验证码: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="individual_reg">
+              <div class="title">
+                个人基本资料
+                <span class="red">*为必填项</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 姓名: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls radio_wrap">
+                    <div class="reg_label">性别：</div>
+                    <div class="radio_wrap">
+                      <div
+                        class="radio_item"
+                        v-for="(item, index) in sex_radios"
+                        :key="item.id"
+                      >
+                        <span
+                          class="radio"
+                          :class="{ on: item.isChecked }"
+                        ></span>
+                        <input
+                          v-model="radio"
+                          type="radio"
+                          class="input_radio"
+                          :value="item.value"
+                          :checked="item.isChecked"
+                          @click="check(index)"
+                        />
+                        {{ item.label }}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 出生日期: </label>
+                    <input 
+                      type="text" 
+                      class="reg_input"
+                      v-model="date"
+                      placeholder="1991-02-07"
+                      @click="switchPicker('isVisible')"
+                    >
+                    <nut-datepicker
+                      :is-visible="isVisible"
+                      title="请选择日期"
+                      type="date"
+                      startDate="1919-11-10"
+                      endDate="2019-10-05"
+                      @close="switchPicker('isVisible')"
+                      @choose="setChooseValue"
+                    >
+                    </nut-datepicker>
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 现居住地: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 传真: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+                <li>
+                  <div class="controls">
+                    <label for="user" class="reg_label"> 邮箱: </label>
+                    <input type="text" class="reg_input" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="reg_type">
+              <div class="title">注册类型</div>
+              <div class="radio_wrap">
+                <div
+                  class="radio_item"
+                  v-for="(item, index) in radios"
+                  :key="item.id"
+                >
+                  <span class="radio" :class="{ on: item.isChecked }"></span>
+                  <input
+                    v-model="radio"
+                    type="radio"
+                    class="input_radio"
+                    :value="item.value"
+                    :checked="item.isChecked"
+                    @click="check(index)"
+                  />
+                  {{ item.label }}
+                </div>
+              </div>
+            </div>
+            <div class="reg_btn">
+              <button class="btn">注册</button>
+            </div>
+          </nut-tab-panel>
         </nut-tab>
       </div>
     </div>
@@ -109,21 +251,38 @@ export default {
   name: "LoginBox",
   data() {
     return {
-      radio: 1,
-      radios: [
+      sex_radio: 1,
+      sex_radios: [
         {
           id: 1,
-          label: "先生",
+          label: "男",
           value: "1",
           isChecked: true,
         },
         {
           id: 2,
-          label: "女士",
+          label: "女",
           value: "2",
           isChecked: false,
         },
       ],
+      user_radio: 1,
+      user_radios: [
+        {
+          id: 1,
+          label: "申请普通会员(免费发布信息）",
+          value: "1",
+          isChecked: true,
+        },
+        {
+          id: 2,
+          label: "申请优秀供应商(付费推广）",
+          value: "2",
+          isChecked: false,
+        },
+      ],
+      isVisible: false,
+      date: null
     };
   },
   methods: {
@@ -139,6 +298,12 @@ export default {
       this.radios[index].isChecked = true;
       console.log(this.radio);
     },
+    switchPicker(param) {
+      this[`${param}`] = !this[`${param}`];
+    },
+    setChooseValue(param) {
+      this.date = param[3];
+    }
   },
 };
 </script>
@@ -173,13 +338,20 @@ export default {
   .individual_reg {
     .title {
       font-size: 0.3rem;
-      height: 1rem;
-      line-height: 1rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
       text-align: center;
+      color: #333;
       .red {
         font-size: 0.24rem;
         color: red;
       }
+    }
+    .sub_ti {
+      margin-bottom: 0.4rem;
+      font-size: 0.24rem;
+      color: #666;
+      text-align: center;
     }
     .controls {
       display: flex;
@@ -191,17 +363,40 @@ export default {
       font-size: 0.26rem;
     }
     .reg_input {
-      padding: 0.3rem 0.1rem 0.3rem 0.8rem;
+      padding: 0.1rem;
+      height: .7rem;
+      line-height: .7rem;
+      font-size: .26rem;
       box-sizing: border-box;
       border: 1px solid #ccc;
     }
   }
+  .reg_type {
+    .title {
+      font-size: 0.3rem;
+      height: 1rem;
+      line-height: 1rem;
+      text-align: center;
+    }
+  }
+  .reg_btn {
+    .btn {
+      width: 100%;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      font-size: 0.3rem;
+      border-radius: 0.6rem;
+      color: #fff;
+      background-color: $mainColor;
+    }
+  }
   .radio_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    font-size: 0.28rem;
     .radio_item {
       position: relative;
-      width: 4rem;
+      margin-right: 0.4rem;
       input {
         width: 0.4rem;
         margin-right: 0.1rem;
