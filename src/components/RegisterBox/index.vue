@@ -202,10 +202,14 @@
                   </div>
                 </li>
                 <li>
-                  <div class="controls">
-                    <label for="user" class="reg_label"> 传真: </label>
-                    <input type="text" class="reg_input" />
-                  </div>
+                    <div class="input" @click="openValue">
+                      <label for="user" class="reg_label"> 最高学历: </label>
+                      <input type="text" class="reg_input /" v-model="value" placeholder="请选择">
+                      <i class="iconfont arrow">&#xe683;</i>
+                    </div>
+                    <select class="list" v-show="show">
+                      <option @click="getvalue(index,item)" v-for="(item,index) in eduData" :key="item.index">{{item}}</option>
+                    </select>
                 </li>
                 <li>
                   <div class="controls">
@@ -282,7 +286,12 @@ export default {
         },
       ],
       isVisible: false,
-      date: null
+      date: null,
+      eduData: [
+         '高中以下', '中专/技校', '大专', '本科', '硕士', '博士'
+      ],
+      show: false,
+      value: ''
     };
   },
   methods: {
@@ -303,6 +312,13 @@ export default {
     },
     setChooseValue(param) {
       this.date = param[3];
+    },
+    openValue() {
+      this.show = !this.show;
+    },
+    getValue(index, item) {
+      this.value = item;
+      this.show = false;
     }
   },
 };
@@ -347,6 +363,11 @@ export default {
         color: red;
       }
     }
+    ul {
+      li {
+        position: relative;
+      }
+    }
     .sub_ti {
       margin-bottom: 0.4rem;
       font-size: 0.24rem;
@@ -358,6 +379,35 @@ export default {
       align-items: center;
       margin-bottom: 0.28rem;
     }
+      .input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        .arrow {
+          display: block;
+          transform: rotate(90deg);
+          position: absolute;
+          right: .1rem;
+          top: .2rem;
+        }
+      }
+      .list {
+        width: 75%;
+        position: absolute;
+        right: 0;
+        top: .7rem;
+        border: 1px solid #ccc;
+        select{
+          option {
+            width: 100%;
+            height: .7rem;
+            line-height: .7rem;
+            cursor: pointer;
+            padding-left: .2rem;
+          }
+        }
+      }
     .reg_label {
       width: 33%;
       font-size: 0.26rem;
