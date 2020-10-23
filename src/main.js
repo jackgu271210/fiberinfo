@@ -11,10 +11,10 @@ import '@/assets/css/iconfont.css'
 import 'swiper/swiper-bundle.css'
 import '@/assets/css/base.css'
 
-import NutUI from '@nutui/nutui'
-import '@nutui/nutui/dist/nutui.css'
+Vue.use(MintUI)
 
-NutUI.install(Vue);
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 Vue.use(VueAwesomeSwiper)
 

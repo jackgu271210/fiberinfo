@@ -204,7 +204,8 @@
                 <li>
                     <div class="input" @click="openValue">
                       <label for="user" class="reg_label"> 最高学历: </label>
-                      <input type="text" class="reg_input /" v-model="value" placeholder="请选择">
+                      <!-- <input type="text" class="reg_input /" v-model="value" placeholder="请选择"> -->
+                      <mt-picker :slots="slots" @change="onValuesChange"></mt-picker>
                       <i class="iconfont arrow">&#xe683;</i>
                     </div>
                     <select class="list" v-show="show">
@@ -248,6 +249,7 @@
       </div>
     </div>
   </form>
+  
 </template>
 
 <script>
@@ -291,7 +293,24 @@ export default {
          '高中以下', '中专/技校', '大专', '本科', '硕士', '博士'
       ],
       show: false,
-      value: ''
+      value: '',
+      slots: [
+        {
+          flex: 1,
+          values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+          className: 'slot1',
+          textAlign: 'right'
+        }, {
+          divider: true,
+          content: '-',
+          className: 'slot2'
+        }, {
+          flex: 1,
+          values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+          className: 'slot3',
+          textAlign: 'left'
+        }
+      ]
     };
   },
   methods: {
@@ -319,6 +338,11 @@ export default {
     getValue(index, item) {
       this.value = item;
       this.show = false;
+    },
+    onValuesChange(picker, values) {
+      if (values[0] > values[1]) {
+        picker.setSlotValue(1, values[0]);
+      }
     }
   },
 };
