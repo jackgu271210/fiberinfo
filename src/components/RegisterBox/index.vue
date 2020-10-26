@@ -12,102 +12,102 @@
           <mt-tab-container-item id="1">
             <mt-cell>
               <div class="individual_reg">
-              <div class="title">个人登陆信息</div>
-              <ul>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 登陆用户名</label>
-                      <input type="text" class="reg_input" />
+                <div class="title">企业登陆信息</div>
+                <ul>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 登陆用户名</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 登陆密码</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 登陆密码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 确认密码</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 确认密码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 验证码</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 验证码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="individual_reg">
-              <div class="title">
-                企业基本资料
-                <span class="red">*为必填项</span>
+                  </li>
+                </ul>
               </div>
-              <ul>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 公司名称</label>
-                      <input type="text" class="reg_input" />
+              <div class="individual_reg">
+                <div class="title">
+                  企业基本资料
+                  <span class="red">*为必填项</span>
+                </div>
+                <ul>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 公司名称</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 联系人</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 联系人</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 手机</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 手机</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 电话</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 电话</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 传真</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 传真</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="controls">
-                    <div class="controls_wrap">
-                      <label for="user" class="reg_label"> 邮箱</label>
-                      <input type="text" class="reg_input" />
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 邮箱</label>
+                        <input type="text" class="reg_input" />
+                      </div>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="reg_type">
-              <div class="title">注册类型</div>
-              <div class="radio_wrap">
-                <!-- <div
+                  </li>
+                </ul>
+              </div>
+              <div class="reg_type">
+                <div class="title">注册类型</div>
+                <div class="radio_wrap">
+                  <!-- <div
                   class="radio_item"
                   v-for="(item, index) in user_radios"
                   :key="item.id"
@@ -123,18 +123,167 @@
                   />
                   {{ item.label }}
                 </div> -->
-                <mt-radio v-model="value" :options="[' 申请普通会员(免费发布信息）', ' 申请优秀供应商(付费推广）']">
-                </mt-radio>
+                  <mt-radio
+                    v-model="value"
+                    :options="[
+                      ' 申请普通会员(免费发布信息）',
+                      ' 申请优秀供应商(付费推广）',
+                    ]"
+                  >
+                  </mt-radio>
+                </div>
               </div>
-            </div>
-            <div class="reg_btn">
-              <button class="btn">注册</button>
-            </div>
+              <div class="reg_btn">
+                <button class="btn">注册</button>
+              </div>
             </mt-cell>
           </mt-tab-container-item>
           <mt-tab-container-item id="2">
-             <mt-cell>
-              222
+            <mt-cell>
+              <div class="individual_reg">
+                <div class="title">个人登陆信息</div>
+                <ul>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 登陆用户名</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 登陆密码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 确认密码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 验证码</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="individual_reg">
+                <div class="title">
+                  个人基本资料
+                  <span class="red">*为必填项</span>
+                </div>
+                <ul>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label">姓名</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <mt-radio
+                        class="sex-radiolist"
+                        title="性别"
+                        v-model="value"
+                        :options="['男', '女']"
+                      >
+                      </mt-radio>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <mt-field
+                          class="birthday"
+                          label="生日"
+                          placeholder="生日"
+                          type="date"
+                          v-model="birthday"
+                        ></mt-field>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap" @click="showPopup">
+                        <label for="user" class="reg_label"> 电话</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                      <mt-popup
+                        class="pop"
+                        v-model="sexpopup"
+                        position="bottom"
+                      >
+                        <mt-picker
+                          :slots="slots"
+                          valueKey="name"
+                          @change="onValuesChange"
+                        ></mt-picker>
+                      </mt-popup>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 传真</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <label for="user" class="reg_label"> 邮箱</label>
+                        <input type="text" class="reg_input" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="reg_type">
+                <div class="title">注册类型</div>
+                <div class="radio_wrap">
+                  <!-- <div
+                  class="radio_item"
+                  v-for="(item, index) in user_radios"
+                  :key="item.id"
+                >
+                  <span class="radio" :class="{ on: item.isChecked }"></span>
+                  <input
+                    v-model="radio"
+                    type="radio"
+                    class="input_radio"
+                    :value="item.value"
+                    :checked="item.isChecked"
+                    @click="check(index)"
+                  />
+                  {{ item.label }}
+                </div> -->
+                  <mt-radio
+                    v-model="value"
+                    :options="[
+                      ' 申请普通会员(免费发布信息）',
+                      ' 申请优秀供应商(付费推广）',
+                    ]"
+                  >
+                  </mt-radio>
+                </div>
+              </div>
+              <div class="reg_btn">
+                <button class="btn">注册</button>
+              </div>
             </mt-cell>
           </mt-tab-container-item>
         </mt-tab-container>
@@ -148,7 +297,7 @@ export default {
   name: "LoginBox",
   data() {
     return {
-      selected: '1',
+      selected: "1",
       sex_radio: 1,
       sex_radios: [
         {
@@ -199,9 +348,13 @@ export default {
           textAlign: "right",
         },
       ],
+      closeOnClickModal: "true"
     };
   },
   methods: {
+    showPopup() {
+      this.closeOnClickModal = !closeOnClickModal;
+    },
     check(index) {
       console.log(this);
       // 先取消所有选中项目
@@ -240,12 +393,12 @@ export default {
 @import "@/assets/css/variable.scss";
 @import "@/assets/css/mixin.scss";
 ::v-deep .mint-tab-item-label {
-    font-size: .26rem;
-  }
-::v-deep  .mint-cell-value {
-    width: 100%;
-    display: block;
-    color: inherit;
+  font-size: 0.26rem;
+}
+::v-deep .mint-cell-value {
+  width: 100%;
+  display: block;
+  color: inherit;
 }
 ::v-deep .mint-cell-wrapper {
   display: block;
@@ -255,38 +408,57 @@ export default {
 ::v-deep .mint-radiolist-label {
   padding: 0;
 }
-::v-deep  .mint-radio-label {
-  font-size: .26rem;
+::v-deep .mint-radio-label {
+  font-size: 0.26rem;
 }
+::v-deep .mint-cell {
+  min-height: 0.8rem;
+  line-height: 0.8rem;
+}
+::v-deep .mint-radiolist-title {
+  display: block;
+  font-size: 0.26rem;
+  margin: 0;
+  margin-right: 0.4rem;
+  color: inherit;
+}
+::v-deep .mint-radiolist-label {
+  padding: 0;
+  padding-right: 0.4rem;
+}
+::v-deep .mint-field {
+  .mint-cell-title {
+    width: 1rem;
+    font-size: 0.26rem;
+  }
+}
+::v-deep .mint-cell:last-child {
+  background-image: none;
+}
+// ::v-deep .mint-radiolist {
+//   display: flex;
+// }
+
 .mint-navbar {
   border-bottom: 1px solid #dbdbdb;
-  
 }
 
 .register_box {
-  ::v-deep .nut-tab {
-    border: none;
-    padding: 0;
-    .nut-tab-item {
-      padding: 10px 0 0 0;
-      height: auto;
-    }
-    .nav-bar {
-      background: $mainColor;
-    }
-    .nut-title-nav {
-      a {
-        @include title;
-      }
-    }
-    .nut-tab-active {
-      color: $mainColor;
-      a {
-        color: $mainColor;
-      }
-    }
-  }
   .mint-cell-value {
+    .sex-radiolist {
+      display: flex;
+      align-items: center;
+      ::v-deep .mint-cell {
+        min-height: auto;
+      }
+    }
+    .birthday {
+      background-image: none;
+      ::v-deep .mint-cell-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     li {
       &:last-child {
         .controls {
@@ -295,7 +467,7 @@ export default {
       }
     }
     .title {
-      margin: .2rem 0;
+      margin: 0.2rem 0;
       font-size: 0.3rem;
       height: 0.6rem;
       line-height: 0.6rem;
@@ -365,6 +537,7 @@ export default {
     display: flex;
     justify-content: flex-start;
     font-size: 0.28rem;
+
     .radio_item {
       position: relative;
       margin-right: 0.4rem;

@@ -123,14 +123,15 @@ export default {
   color: #fff;
   background-color: $mainColor;
 }
+
 .login_box {
   padding-top: 0.4rem;
   .mint-radiolist {
-        display: flex;
-        ::v-deep .mint-radiolist-title {
-          margin: 0px;
-        }
-      }
+    display: flex;
+    ::v-deep .mint-radiolist-title {
+      margin: 0px;
+    }
+  }
   .mint-radiolist {
     display: flex;
   }
