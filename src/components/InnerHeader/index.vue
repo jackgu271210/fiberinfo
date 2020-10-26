@@ -4,7 +4,7 @@
           <i class="iconfont back">&#xe683;</i>
       </a>
     <span class="header_ti">登陆</span>
-    <span class="header_r">注册</span>
+    <a href="/register" class="header_ti">注册</a>
   </div>
 </template>
 
@@ -27,11 +27,12 @@ export default {
         color: #fff;
         .back {
             display: block;
+            color: #fff;
             transform: rotateY(180deg);
         }
     }
-    span {
-        font-size: .4rem;
+    .header_ti {
+        font-size: .3rem;
     }
 }
 </style>

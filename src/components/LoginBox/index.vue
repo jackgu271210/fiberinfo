@@ -5,42 +5,46 @@
         <ul>
           <li>
             <div class="controls">
-              <i class="iconfont username">&#xe607;</i>
-              <input
-                type="text"
-                placeholder="请输入用户名"
-                class="form_control"
-              />
+              <div class="controls_wrap">
+                <i class="iconfont username">&#xe607;</i>
+                <input
+                  type="text"
+                  placeholder="请输入用户名"
+                  class="form_control"
+                />
+              </div>
             </div>
           </li>
           <li>
             <div class="controls">
-              <i class="iconfont username">&#xe79c;</i>
-              <input
-                type="password"
-                placeholder="请输入密码"
-                class="form_control"
-              />
+              <div class="controls_wrap">
+                <i class="iconfont username">&#xe79c;</i>
+                <input
+                  type="password"
+                  placeholder="请输入密码"
+                  class="form_control"
+                />
+              </div>
             </div>
           </li>
           <li>
             <div class="controls verControls">
-              <div class="input_box">
+              <div class="controls_wrap">
                 <i class="iconfont username">&#xe660;</i>
                 <input
                   type="text"
                   placeholder="请输入验证码"
                   class="form_control"
                 />
-              </div>
-              <div class="sidentify_box">
-                <sidentify></sidentify>
+                <div class="sidentify_box">
+                  <sidentify></sidentify>
+                </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="controls radio_wrap">
-              <div
+            <div class="controls">
+              <!-- <div
                 class="radio_item"
                 v-for="(item, index) in radios"
                 :key="item.id"
@@ -55,12 +59,14 @@
                   @click="check(index)"
                 />
                 {{ item.label }}
-              </div>
+              </div> -->
+              <mt-radio v-model="value" :options="['企业用户', '个人用户']">
+              </mt-radio>
             </div>
           </li>
           <li>
             <div class="controls">
-              <button class="btn">登陆</button>
+              <mt-button type="default" size="large">登陆</mt-button>
             </div>
           </li>
         </ul>
@@ -82,23 +88,7 @@ export default {
     Sidentify,
   },
   data() {
-    return {
-      radio: 1,
-      radios: [
-        {
-          id: 1,
-          label: "企业用户",
-          value: "1",
-          isChecked: true,
-        },
-        {
-          id: 2,
-          label: "个人用户",
-          value: "2",
-          isChecked: false,
-        },
-      ],
-    };
+    return {};
   },
   methods: {
     check(index) {
@@ -119,85 +109,66 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/variable.scss";
+::v-deep .mint-cell-wrapper {
+  padding: 0px;
+}
+::v-deep .mint-radiolist-label {
+  padding: 0;
+  padding-right: 0.4rem;
+}
+::v-deep .mint-radiolist-title {
+  margin: 0;
+}
+::v-deep .mint-button--default {
+  color: #fff;
+  background-color: $mainColor;
+}
 .login_box {
   padding-top: 0.4rem;
-  .controls {
+  .mint-radiolist {
+        display: flex;
+        ::v-deep .mint-radiolist-title {
+          margin: 0px;
+        }
+      }
+  .mint-radiolist {
+    display: flex;
+  }
+
+  .radio_item {
     position: relative;
-    margin-bottom: 0.28rem;
-    i {
-      position: absolute;
-      left: 0.3rem;
-      top: 0.3rem;
-      font-size: 0.3rem;
-      z-index: 2;
-    }
-    .form_control {
-      border: 1px solid #ccc;
-    }
+    width: 4rem;
     input {
-      padding: 0.1rem;
-      height: .7rem;
-      line-height: .7rem;
-      font-size: .26rem;
-      box-sizing: border-box;
+      width: 0.4rem;
+      margin-right: 0.1rem;
     }
-    .btn {
-      width: 100%;
-      height: 0.8rem;
-      line-height: 0.8rem;
-      font-size: 0.3rem;
-      border-radius: 0.6rem;
-      color: #fff;
-      background-color: $mainColor;
+    .radio {
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: url(../../assets/images/radio.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 200%;
     }
-    .input_box {
-      width: 60%;
+    .input_radio {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
     }
-    .sidentify_box {
-      width: 32%;
-    }
-  }
-  .verControls {
-    display: flex;
-    justify-content: space-between;
-  }
-  .radio_wrap {
-    display: flex;
-    justify-content: space-between;
-    .radio_item {
-      position: relative;
-      width: 4rem;
-      input {
-        width: 0.4rem;
-        margin-right: 0.1rem;
-      }
-      .radio {
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
-        vertical-align: middle;
-        cursor: pointer;
-        background-image: url(../../assets/images/radio.png);
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 200%;
-      }
-      .input_radio {
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-      }
-      .on {
-        background-position: -0.4rem 0;
-      }
+    .on {
+      background-position: -0.4rem 0;
     }
   }
+
   .forget_register {
     display: flex;
     justify-content: space-between;
     span {
-      font-size: .24rem;
+      font-size: 0.24rem;
       color: #999;
     }
   }

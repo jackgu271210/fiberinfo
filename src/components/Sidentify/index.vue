@@ -15,8 +15,8 @@
         },
         data(){
             return {
-                fontSizeMin: 160,
-                fontSizeMax: 40,
+                fontSizeMin: 80,
+                fontSizeMax: 20,
                 backgroundColorMin: 180,
                 backgroundColorMax:240,
                 colorMin: 50,
@@ -25,8 +25,8 @@
                 lineColorMax: 180,
                 dotColorMin: 0,
                 dotColorMax: 255,
-                contentWidth: 100,
-                contentHeight: 38
+                contentWidth: 80,
+                contentHeight: 24
             }
         },
         methods: {
@@ -105,4 +105,10 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+#s-canvas {
+    vertical-align: middle;
+}
+</style>
 
