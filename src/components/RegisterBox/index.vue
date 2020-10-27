@@ -17,32 +17,44 @@
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 登陆用户名</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="登陆用户名"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 登陆密码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="登陆密码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 确认密码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="确认密码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 验证码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="验证码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
@@ -57,48 +69,66 @@
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 公司名称</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="公司名称"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 联系人</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="联系人"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 手机</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="手机"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 电话</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="电话"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 传真</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="传真"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 邮箱</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="邮箱"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
@@ -133,8 +163,8 @@
                   </mt-radio>
                 </div>
               </div>
-              <div class="reg_btn">
-                <button class="btn">注册</button>
+              <div class="controls">
+                <mt-button type="default" size="large">立即注册</mt-button>
               </div>
             </mt-cell>
           </mt-tab-container-item>
@@ -146,32 +176,44 @@
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 登陆用户名</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="登陆用户名"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 登陆密码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="登陆密码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 确认密码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="确认密码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 验证码</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="验证码"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
@@ -186,8 +228,11 @@
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label">姓名</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="姓名"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
@@ -217,9 +262,13 @@
                   </li>
                   <li>
                     <div class="controls">
-                      <div class="controls_wrap" @click="showPopup">
-                        <label for="user" class="reg_label"> 电话</label>
-                        <input type="text" class="reg_input" />
+                      <div class="controls_wrap">
+                        <input
+                          type="text"
+                          placeholder="现居住地"
+                          class="reg_input"
+                        />
+                        <i class="iconfont arrow_down">&#xe683;</i>
                       </div>
                       <mt-popup
                         class="pop"
@@ -237,52 +286,110 @@
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 传真</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="最高学历"
+                          v-model="eduValue"
+                          class="reg_input"
+                        />
+                        <i class="iconfont arrow_down" @click="handleClick"
+                          >&#xe683;</i
+                        >
+                      </div>
+                      <mt-popup
+                        class="pop"
+                        v-model="popupVisible"
+                        modal="false"
+                        position="bottom"
+                      >
+                        <mt-picker
+                          :slots="slots"
+                          valueKey="name"
+                          :showToolbar="true"
+                          ref="picker"
+                        >
+                          <mt-button @click.prevent="handleCancel" class="cancel"
+                            >取消</mt-button
+                          >
+                          请选择最高学历
+                          <mt-button @click.prevent="handleConfirm" class="confirm"
+                            >确认</mt-button
+                          >
+                        </mt-picker>
+                      </mt-popup>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <form-select />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <input
+                          type="text"
+                          placeholder="欲求职位"
+                          class="reg_input"
+                        />
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="controls">
                       <div class="controls_wrap">
-                        <label for="user" class="reg_label"> 邮箱</label>
-                        <input type="text" class="reg_input" />
+                        <input
+                          type="text"
+                          placeholder="期望月薪"
+                          class="reg_input"
+                        />
+                        <i class="iconfont arrow_down">&#xe683;</i>
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <input
+                          type="text"
+                          placeholder="手机"
+                          class="reg_input"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <input
+                          type="text"
+                          placeholder="邮箱"
+                          class="reg_input"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <div class="controls_wrap">
+                        <textarea
+                          name=""
+                          id=""
+                          placeholder="工作简历"
+                          cols="30"
+                          rows="10"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="controls">
+                      <mt-button type="default" size="large"
+                        >立即注册</mt-button
+                      >
+                    </div>
+                  </li>
                 </ul>
-              </div>
-              <div class="reg_type">
-                <div class="title">注册类型</div>
-                <div class="radio_wrap">
-                  <!-- <div
-                  class="radio_item"
-                  v-for="(item, index) in user_radios"
-                  :key="item.id"
-                >
-                  <span class="radio" :class="{ on: item.isChecked }"></span>
-                  <input
-                    v-model="radio"
-                    type="radio"
-                    class="input_radio"
-                    :value="item.value"
-                    :checked="item.isChecked"
-                    @click="check(index)"
-                  />
-                  {{ item.label }}
-                </div> -->
-                  <mt-radio
-                    v-model="value"
-                    :options="[
-                      ' 申请普通会员(免费发布信息）',
-                      ' 申请优秀供应商(付费推广）',
-                    ]"
-                  >
-                  </mt-radio>
-                </div>
-              </div>
-              <div class="reg_btn">
-                <button class="btn">注册</button>
               </div>
             </mt-cell>
           </mt-tab-container-item>
@@ -293,8 +400,12 @@
 </template>
 
 <script>
+import FormSelect from '@/components/FormSelect';
 export default {
   name: "LoginBox",
+  components: {
+    FormSelect
+  },
   data() {
     return {
       selected: "1",
@@ -332,28 +443,22 @@ export default {
       date: null,
       eduData: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
       show: false,
-      value: "",
+      eduValue: "",
       slots: [
         {
           flex: 1,
-          values: [
-            "2015-01",
-            "2015-02",
-            "2015-03",
-            "2015-04",
-            "2015-05",
-            "2015-06",
-          ],
+          values: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
           className: "slot1",
           textAlign: "right",
         },
       ],
-      closeOnClickModal: "true"
+      closeOnClickModal: "true",
+      popupVisible: false,
     };
   },
   methods: {
-    showPopup() {
-      this.closeOnClickModal = !closeOnClickModal;
+    handleClick() {
+      this.popupVisible = true;
     },
     check(index) {
       console.log(this);
@@ -380,12 +485,14 @@ export default {
       this.value = item;
       this.show = false;
     },
-    onValuesChange(picker, values) {
-      if (values[0] > values[1]) {
-        picker.setSlotValue(1, values[0]);
-      }
+    handleCancel() {
+      this.popupVisible = false;
     },
-  },
+    handleConfirm() {
+      this.eduValue = this.$refs.picker.getValues()[0];
+      this.popupVisible = false;
+    }
+  }
 };
 </script>
 
@@ -435,14 +542,52 @@ export default {
 ::v-deep .mint-cell:last-child {
   background-image: none;
 }
-// ::v-deep .mint-radiolist {
-//   display: flex;
-// }
+::v-deep .mint-button--default {
+  color: #fff;
+  background-color: $mainColor;
+}
 
 .mint-navbar {
   border-bottom: 1px solid #dbdbdb;
 }
-
+.controls {
+  .mint-popup {
+    width: 100%;
+    ::v-deep .picker-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem;
+      .mint-button--default {
+        background: none;
+        font-size: 0.26rem;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      .confirm {
+        color: $mainColor;
+      }
+      .cancel {
+        color: #666;
+      }
+    }
+    ::v-deep .picker-slot-right {
+      text-align: center;
+    }
+  }
+  .controls_wrap {
+    input {
+      width: 100%;
+      margin-left: 0;
+    }
+    .arrow_down {
+      transform: rotate(90deg);
+      color: #333;
+      font-size: 0.2rem;
+    }
+  }
+}
 .register_box {
   .mint-cell-value {
     .sex-radiolist {
@@ -520,131 +665,6 @@ export default {
     }
     .reg_label {
       font-size: 0.26rem;
-    }
-  }
-  .reg_btn {
-    .btn {
-      width: 100%;
-      height: 0.8rem;
-      line-height: 0.8rem;
-      font-size: 0.3rem;
-      border-radius: 0.6rem;
-      color: #fff;
-      background-color: $mainColor;
-    }
-  }
-  .radio_wrap {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 0.28rem;
-
-    .radio_item {
-      position: relative;
-      margin-right: 0.4rem;
-      input {
-        width: 0.4rem;
-        margin-right: 0.1rem;
-      }
-      .radio {
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
-        vertical-align: middle;
-        cursor: pointer;
-        background-image: url(../../assets/images/radio.png);
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 200%;
-      }
-      .input_radio {
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-      }
-      .on {
-        background-position: -0.4rem 0;
-      }
-    }
-  }
-}
-.login_box {
-  padding-top: 0.4rem;
-  .controls {
-    position: relative;
-    margin-bottom: 0.28rem;
-    i {
-      position: absolute;
-      left: 0.3rem;
-      top: 0.3rem;
-      font-size: 0.3rem;
-      z-index: 2;
-    }
-    .form_control {
-      border: 1px solid #ccc;
-    }
-    input {
-      padding: 0.3rem 0.1rem 0.3rem 0.8rem;
-      box-sizing: border-box;
-    }
-    .btn {
-      width: 100%;
-      height: 0.8rem;
-      line-height: 0.8rem;
-      font-size: 0.3rem;
-      border-radius: 0.6rem;
-      color: #fff;
-      background-color: $mainColor;
-    }
-    .input_box {
-      width: 60%;
-    }
-    .sidentify_box {
-      width: 32%;
-    }
-  }
-  .verControls {
-    display: flex;
-    justify-content: space-between;
-  }
-  .radio_wrap {
-    display: flex;
-    justify-content: space-between;
-    .radio_item {
-      position: relative;
-      width: 4rem;
-      input {
-        width: 0.4rem;
-        margin-right: 0.1rem;
-      }
-      .radio {
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
-        vertical-align: middle;
-        cursor: pointer;
-        background-image: url(../../assets/images/radio.png);
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 200%;
-      }
-      .input_radio {
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
-      }
-      .on {
-        background-position: -0.4rem 0;
-      }
-    }
-  }
-  .forget_register {
-    display: flex;
-    justify-content: space-between;
-    span {
-      font-size: 0.24rem;
-      color: #999;
     }
   }
 }

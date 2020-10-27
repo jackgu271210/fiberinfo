@@ -135,10 +135,14 @@ select {
 }
 
 input, textarea {
-  font-size: 0.2rem;
-  color: #666 !important;
+  font-size: 0.26rem;
+  font-family: '微软雅黑';
+  box-sizing: border-box;
 }
-
+textarea {
+  width: 100%;
+  padding: .4rem 0;
+}
 input::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #999;
@@ -714,9 +718,5 @@ div.screen.animate {
 }
 
 .controls .controls_wrap input {
-  margin-left: 0.4rem;
   height: 0.7rem;
-  line-height: 0.7rem;
-  font-size: 0.26rem;
-  box-sizing: border-box;
 }

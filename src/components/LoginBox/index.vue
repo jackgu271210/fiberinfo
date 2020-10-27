@@ -126,12 +126,21 @@ export default {
 
 .login_box {
   padding-top: 0.4rem;
-  .mint-radiolist {
-    display: flex;
-    ::v-deep .mint-radiolist-title {
-      margin: 0px;
+  .controls {
+    input {
+      width: 100%;
+    }
+    .iconfont {
+      margin-right: .3rem;
+    }
+    .mint-radiolist {
+      display: flex;
+      ::v-deep .mint-radiolist-title {
+        margin: 0px;
+      }
     }
   }
+  
   .mint-radiolist {
     display: flex;
   }
