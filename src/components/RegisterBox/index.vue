@@ -285,43 +285,12 @@
                   </li>
                   <li>
                     <div class="controls">
-                      <div class="controls_wrap">
-                        <input
-                          type="text"
-                          placeholder="最高学历"
-                          v-model="eduValue"
-                          class="reg_input"
-                        />
-                        <i class="iconfont arrow_down" @click="handleClick"
-                          >&#xe683;</i
-                        >
-                      </div>
-                      <mt-popup
-                        class="pop"
-                        v-model="popupVisible"
-                        modal="false"
-                        position="bottom"
-                      >
-                        <mt-picker
-                          :slots="slots"
-                          valueKey="name"
-                          :showToolbar="true"
-                          ref="picker"
-                        >
-                          <mt-button @click.prevent="handleCancel" class="cancel"
-                            >取消</mt-button
-                          >
-                          请选择最高学历
-                          <mt-button @click.prevent="handleConfirm" class="confirm"
-                            >确认</mt-button
-                          >
-                        </mt-picker>
-                      </mt-popup>
+                      <form-select :formData="eduData" />
                     </div>
                   </li>
                   <li>
                     <div class="controls">
-                      <form-select />
+                      <form-select :formData="workData" />
                     </div>
                   </li>
                   <li>
@@ -337,14 +306,7 @@
                   </li>
                   <li>
                     <div class="controls">
-                      <div class="controls_wrap">
-                        <input
-                          type="text"
-                          placeholder="期望月薪"
-                          class="reg_input"
-                        />
-                        <i class="iconfont arrow_down">&#xe683;</i>
-                      </div>
+                      <form-select :formData="salaryData" />
                     </div>
                   </li>
                   <li>
@@ -400,60 +362,54 @@
 </template>
 
 <script>
-import FormSelect from '@/components/FormSelect';
+import FormSelect from "@/components/FormSelect";
 export default {
   name: "LoginBox",
   components: {
-    FormSelect
+    FormSelect,
   },
   data() {
     return {
       selected: "1",
-      sex_radio: 1,
-      sex_radios: [
-        {
-          id: 1,
-          label: "男",
-          value: "1",
-          isChecked: true,
-        },
-        {
-          id: 2,
-          label: "女",
-          value: "2",
-          isChecked: false,
-        },
-      ],
-      user_radio: 1,
-      user_radios: [
-        {
-          id: 1,
-          label: "申请普通会员(免费发布信息）",
-          value: "1",
-          isChecked: true,
-        },
-        {
-          id: 2,
-          label: "申请优秀供应商(付费推广）",
-          value: "2",
-          isChecked: false,
-        },
-      ],
       isVisible: false,
       date: null,
-      eduData: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
       show: false,
-      eduValue: "",
-      slots: [
-        {
-          flex: 1,
-          values: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
-          className: "slot1",
-          textAlign: "right",
-        },
-      ],
-      closeOnClickModal: "true",
-      popupVisible: false,
+      eduData: {
+        placeholder: "请选择最高学历",
+        eduValue: "",
+        slots: [
+          {
+            flex: 1,
+            values: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
+            className: "slot1",
+            textAlign: "center",
+          },
+        ],
+      },
+      workData: {
+        placeholder: "请选择工作年限",
+        eduValue: "",
+        slots: [
+          {
+            flex: 1,
+            values: ["无经验", "1-3年", "3-5年", "5-10年", "10年以上"],
+            className: "slot1",
+            textAlign: "center",
+          },
+        ],
+      },
+      salaryData: {
+        placeholder: "请选择期望薪资",
+        eduValue: "",
+        slots: [
+          {
+            flex: 1,
+            values: ["3000以下", "3000-5000", "5000-8000", "8000以上"],
+            className: "slot1",
+            textAlign: "center",
+          },
+        ],
+      }
     };
   },
   methods: {
@@ -491,8 +447,8 @@ export default {
     handleConfirm() {
       this.eduValue = this.$refs.picker.getValues()[0];
       this.popupVisible = false;
-    }
-  }
+    },
+  },
 };
 </script>
 

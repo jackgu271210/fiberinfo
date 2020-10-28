@@ -3,7 +3,7 @@
     <div class="controls_wrap">
       <input
         type="text"
-        placeholder="最高学历"
+        :placeholder="formData.placeholder"
         v-model="eduValue"
         class="reg_input"
       />
@@ -16,14 +16,16 @@
       position="bottom"
     >
       <mt-picker
-        :slots="slots"
+        :slots="formData.slots"
         valueKey="name"
         :showToolbar="true"
         ref="picker"
       >
         <mt-button @click.prevent="handleCancel" class="cancel">取消</mt-button>
-        请选择最高学历
-        <mt-button @click.prevent="handleConfirm" class="confirm">确认</mt-button>
+        {{ pickerTitle }}
+        <mt-button @click.prevent="handleConfirm" class="confirm"
+          >确认</mt-button
+        >
       </mt-picker>
     </mt-popup>
   </div>
@@ -33,17 +35,11 @@
 <script>
 export default {
   name: "FormSelect",
+  props: [
+    "formData",
+  ],
   data() {
     return {
-      eduValue: "",
-      slots: [
-        {
-          flex: 1,
-          values: ["高中以下", "中专/技校", "大专", "本科", "硕士", "博士"],
-          className: "slot1",
-          textAlign: "center",
-        },
-      ],
       closeOnClickModal: "true",
       popupVisible: false,
     };
@@ -88,14 +84,14 @@ export default {
   }
 }
 .controls_wrap {
-    input {
-      width: 100%;
-      margin-left: 0;
-    }
-    .arrow_down {
-      transform: rotate(90deg);
-      color: #333;
-      font-size: 0.2rem;
-    }
+  input {
+    width: 100%;
+    margin-left: 0;
   }
+  .arrow_down {
+    transform: rotate(90deg);
+    color: #333;
+    font-size: 0.2rem;
+  }
+}
 </style>
