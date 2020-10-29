@@ -4,7 +4,7 @@
       <input
         type="text"
         :placeholder="formData.placeholder"
-        v-model="eduValue"
+        v-model="formValue"
         class="reg_input"
       />
       <i class="iconfont arrow_down" @click="handleClick">&#xe683;</i>
@@ -19,6 +19,7 @@
         :slots="formData.slots"
         valueKey="name"
         :showToolbar="true"
+        @change="onValuesChange"
         ref="picker"
       >
         <mt-button @click.prevent="handleCancel" class="cancel">取消</mt-button>
@@ -33,6 +34,7 @@
 
 
 <script>
+import area from "@/assets/utils/area";
 export default {
   name: "FormSelect",
   props: [
@@ -40,8 +42,12 @@ export default {
   ],
   data() {
     return {
+      formValue: '',
       closeOnClickModal: "true",
       popupVisible: false,
+      regionInit: false,
+      pickerTitle: '',
+      name: ''
     };
   },
   methods: {
@@ -52,10 +58,66 @@ export default {
       this.popupVisible = false;
     },
     handleConfirm() {
-      this.eduValue = this.$refs.picker.getValues()[0];
+      this.formValue = this.$refs.picker.getValues()[0];
       this.popupVisible = false;
     },
-  },
+     onValuesChange(picker, values) {
+      if (this.regionInit) {
+      // 取值并赋值
+        this.formValue = values[0]["name"] + ' ' + values[1]["name"] + ' ' + values[2]["name"];
+        this.province = values[0]["name"];
+        this.city = values[1]["name"];
+        this.county = values[2]["name"];
+      //给市、县赋值
+        picker.setSlotValues(1, this.getCityArr(values[0]["name"]));
+        picker.setSlotValues(2, this.getCountyArr(values[0]["name"], values[1]["name"]));
+      } else {
+        this.regionInit = true;
+      }
+    },
+    getProvinceArr() {
+      let provinceArr = [];
+      area.forEach(function (item) {
+      let obj = {};
+          obj.name = item.label;
+          obj.code = item.value;
+          provinceArr.push(obj);
+      });
+      return provinceArr;
+    },
+    getCityArr(province) {
+      let cityArr = [];
+      area.forEach(function (item) {
+      if (item.label === province) {
+          item.children.forEach(function (args) {
+          let obj = {};
+              obj.name = args.label;
+              obj.code = args.value;
+          cityArr.push(obj);
+          });
+      }
+      });
+      return cityArr;
+    },
+    getCountyArr(province,city){
+      let countyArr = [];
+      area.forEach(function(item){
+      if (item.label === province){
+          item.children.forEach(function (args) {
+              if (args.label === city){
+                  args.children.forEach(function (param) {
+                      let obj = {};
+                      obj.name=param.label;
+                      obj.code=param.value;
+                      countyArr.push(obj);
+                      })
+                  }
+              });
+          }
+      });
+      return countyArr;
+    }
+  }
 };
 </script>
 

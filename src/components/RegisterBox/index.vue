@@ -247,7 +247,7 @@
                       </mt-radio>
                     </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <div class="controls">
                       <div class="controls_wrap">
                         <mt-field
@@ -259,28 +259,10 @@
                         ></mt-field>
                       </div>
                     </div>
-                  </li>
+                  </li> -->
                   <li>
                     <div class="controls">
-                      <div class="controls_wrap">
-                        <input
-                          type="text"
-                          placeholder="现居住地"
-                          class="reg_input"
-                        />
-                        <i class="iconfont arrow_down">&#xe683;</i>
-                      </div>
-                      <mt-popup
-                        class="pop"
-                        v-model="sexpopup"
-                        position="bottom"
-                      >
-                        <mt-picker
-                          :slots="slots"
-                          valueKey="name"
-                          @change="onValuesChange"
-                        ></mt-picker>
-                      </mt-popup>
+                      <form-select :formData="areaData" />
                     </div>
                   </li>
                   <li>
@@ -362,6 +344,7 @@
 </template>
 
 <script>
+import area from "@/assets/utils/area";
 import FormSelect from "@/components/FormSelect";
 export default {
   name: "LoginBox",
@@ -373,10 +356,11 @@ export default {
       selected: "1",
       isVisible: false,
       date: null,
+      value: '',
       show: false,
       eduData: {
         placeholder: "请选择最高学历",
-        eduValue: "",
+        formValue: "",
         slots: [
           {
             flex: 1,
@@ -388,7 +372,7 @@ export default {
       },
       workData: {
         placeholder: "请选择工作年限",
-        eduValue: "",
+        formValue: "",
         slots: [
           {
             flex: 1,
@@ -400,7 +384,7 @@ export default {
       },
       salaryData: {
         placeholder: "请选择期望薪资",
-        eduValue: "",
+        formValue: "",
         slots: [
           {
             flex: 1,
@@ -409,13 +393,47 @@ export default {
             textAlign: "center",
           },
         ],
-      }
+      },
+      areaData: {
+        placeholder: "请选择现居住地",
+        province: "", //省
+        city: "", //市
+        county: "", //县
+        formValue: "",
+        slots: [
+          {
+            flex: 1,
+            values: this.getProvinceArr(),
+            className: "slot1",
+            textAlign: "center",
+          },
+          {
+            divider: true,
+            content: "-",
+            className: "slot2",
+          },
+          {
+            flex: 1,
+            values: this.getCityArr("北京市"),
+            className: "slot3",
+            textAlign: "center",
+          },
+          {
+            divider: true,
+            content: "-",
+            className: "slot4",
+          },
+          {
+            flex: 1,
+            values: this.getCountyArr("北京市", "北京市"),
+            className: "slot5",
+            textAlign: "center",
+          },
+        ],
+      },
     };
   },
   methods: {
-    handleClick() {
-      this.popupVisible = true;
-    },
     check(index) {
       console.log(this);
       // 先取消所有选中项目
@@ -441,13 +459,62 @@ export default {
       this.value = item;
       this.show = false;
     },
-    handleCancel() {
-      this.popupVisible = false;
+    onValuesChange(picker, values) {
+      if (this.regionInit) {
+      // 取值并赋值
+        this.formValue = values[0]["name"] + ' ' + values[1]["name"] + ' ' + values[2]["name"];
+        this.province = values[0]["name"];
+        this.city = values[1]["name"];
+        this.county = values[2]["name"];
+      //给市、县赋值
+        picker.setSlotValues(1, this.getCityArr(values[0]["name"]));
+        picker.setSlotValues(2, this.getCountyArr(values[0]["name"], values[1]["name"]));
+      } else {
+        this.regionInit = true;
+      }
     },
-    handleConfirm() {
-      this.eduValue = this.$refs.picker.getValues()[0];
-      this.popupVisible = false;
+    getProvinceArr() {
+      let provinceArr = [];
+      area.forEach(function (item) {
+      let obj = {};
+          obj.name = item.label;
+          obj.code = item.value;
+          provinceArr.push(obj);
+      });
+      return provinceArr;
     },
+    getCityArr(province) {
+      let cityArr = [];
+      area.forEach(function (item) {
+      if (item.label === province) {
+          item.children.forEach(function (args) {
+          let obj = {};
+              obj.name = args.label;
+              obj.code = args.value;
+          cityArr.push(obj);
+          });
+      }
+      });
+      return cityArr;
+    },
+    getCountyArr(province,city){
+      let countyArr = [];
+      area.forEach(function(item){
+      if (item.label === province){
+          item.children.forEach(function (args) {
+              if (args.label === city){
+                  args.children.forEach(function (param) {
+                      let obj = {};
+                      obj.name=param.label;
+                      obj.code=param.value;
+                      countyArr.push(obj);
+                      })
+                  }
+              });
+          }
+      });
+      return countyArr;
+    }
   },
 };
 </script>
