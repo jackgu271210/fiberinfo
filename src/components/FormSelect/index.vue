@@ -24,7 +24,7 @@
       >
         <mt-button @click.prevent="handleCancel" class="cancel">取消</mt-button>
         {{ pickerTitle }}
-        <mt-button @click.prevent="handleConfirm" class="confirm"
+        <mt-button @click.prevent="handleCancel(1)" class="confirm"
           >确认</mt-button
         >
       </mt-picker>
@@ -57,14 +57,14 @@ export default {
     handleCancel() {
       this.popupVisible = false;
     },
-    handleConfirm() {
-      this.formValue = this.$refs.picker.getValues()[0];
+    handleConfirm(values) {
+      this.formValue = this.getValues[0];
       this.popupVisible = false;
     },
      onValuesChange(picker, values) {
       if (this.regionInit) {
       // 取值并赋值
-        this.formValue = values[0]["name"] + ' ' + values[1]["name"] + ' ' + values[2]["name"];
+        this.formValue = values[0]["name"] + ' - ' + values[1]["name"] + ' - ' + values[2]["name"];
         this.province = values[0]["name"];
         this.city = values[1]["name"];
         this.county = values[2]["name"];
