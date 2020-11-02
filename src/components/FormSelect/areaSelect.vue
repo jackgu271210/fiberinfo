@@ -36,7 +36,7 @@
 <script>
 import area from "@/assets/utils/area";
 export default {
-  name: "FormSelect",
+  name: "MultiSelect",
   props: [
     "formData",
   ],
@@ -57,7 +57,7 @@ export default {
     handleCancel() {
       this.popupVisible = false;
     },
-    handleConfirm(values) {
+    handleConfirm() {
       this.formValue = this.getValues[0];
       this.popupVisible = false;
     },

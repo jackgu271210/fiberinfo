@@ -1,128 +1,150 @@
 <template>
   <div class="fib_sckx">
     <div class="cen_er">
-      <nut-tab @tab-switch="tabSwitch" line-width="60">
-        <nut-tab-panel tab-title="市场快讯">
-          <ul class="newsList">
-            <li>
-              <a href="javascript:;">
-                <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
-                <span class="date">2019-09-04</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
-                <span class="date">2019-09-04</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
-                <span class="date">2019-09-04</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
-                <span class="date">2019-09-04</span>
-              </a>
-            </li>
-          </ul>
-        </nut-tab-panel>
-        <nut-tab-panel tab-title="石化动态">
-          <ul class="newsList">
-            <li>
-              <a href="javascript:;">
-                <span class="title">聚焦工业化逆袭之变 中国石化的中国能量</span>
-                <span class="date">2019-10-26</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">聚焦工业化逆袭之变 中国石化的中国能量</span>
-                <span class="date">2019-10-26</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">聚焦工业化逆袭之变 中国石化的中国能量</span>
-                <span class="date">2019-10-26</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">聚焦工业化逆袭之变 中国石化的中国能量</span>
-                <span class="date">2019-10-26</span>
-              </a>
-            </li>
-          </ul>
-        </nut-tab-panel>
-        <nut-tab-panel tab-title="油市综合">
-          <ul class="newsList">
-            <li>
-              <a href="javascript:;">
-                <span class="title">17日盘中惊现52亿美元巨额卖单 国际油市疯狂背后暗流涌动</span>
-                <span class="date">2020-08-19</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">17日盘中惊现52亿美元巨额卖单 国际油市疯狂背后暗流涌动</span>
-                <span class="date">2020-08-19</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">17日盘中惊现52亿美元巨额卖单 国际油市疯狂背后暗流涌动</span>
-                <span class="date">2020-08-19</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">17日盘中惊现52亿美元巨额卖单 国际油市疯狂背后暗流涌动</span>
-                <span class="date">2020-08-19</span>
-              </a>
-            </li>
-          </ul>
-        </nut-tab-panel>
-        <nut-tab-panel tab-title="焦点关注">
-          <ul class="newsList">
-            <li>
-              <a href="javascript:;">
-                <span class="title">卫生间防水用丙纶布好吗,怎样辨别丙纶防水卷材的好坏</span>
-                <span class="date">2020-12-08</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">卫生间防水用丙纶布好吗,怎样辨别丙纶防水卷材的好坏</span>
-                <span class="date">2020-12-08</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">卫生间防水用丙纶布好吗,怎样辨别丙纶防水卷材的好坏</span>
-                <span class="date">2020-12-08</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <span class="title">卫生间防水用丙纶布好吗,怎样辨别丙纶防水卷材的好坏</span>
-                <span class="date">2020-12-08</span>
-              </a>
-            </li>
-          </ul>
-        </nut-tab-panel>
-      </nut-tab>
-      <!-- 二列广告 -->
+      <mt-navbar v-model="selected">
+        <mt-tab-item id="1">市场快讯</mt-tab-item>
+        <mt-tab-item id="2">石化动态</mt-tab-item>
+        <mt-tab-item id="3">油市综合</mt-tab-item>
+        <mt-tab-item id="4">焦点关注</mt-tab-item>
+      </mt-navbar>
+
+      <mt-tab-container v-model="selected">
+        <mt-tab-container-item id="1">
+          <mt-cell>
+            <ul class="newsList">
+              <li>
+                <a href="javascript:;">
+                  <span class="title"
+                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
+                  >
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title"
+                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
+                  >
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title"
+                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
+                  >
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title"
+                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
+                  >
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+            </ul>
+          </mt-cell>
+        </mt-tab-container-item>
+        <mt-tab-container-item id="2">
+          <mt-cell>
+            <ul class="newsList">
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+            </ul>
+          </mt-cell>
+        </mt-tab-container-item>
+        <mt-tab-container-item id="3">
+          <mt-cell>
+            <ul class="newsList">
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+            </ul>
+          </mt-cell>
+        </mt-tab-container-item>
+        <mt-tab-container-item id="4">
+          <mt-cell>
+            <ul class="newsList">
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">煤制聚丙烯对pp粉料市场的替代性分析</span>
+                  <span class="date">2019-09-04</span>
+                </a>
+              </li>
+            </ul>
+          </mt-cell>
+        </mt-tab-container-item>
+      </mt-tab-container>
       <small-ban>
         <ul>
           <li>
-            <img src="@/assets/images/wrap_ban03.jpg"/>
+            <img src="@/assets/images/wrap_ban03.jpg" />
           </li>
           <li>
-            <img src="@/assets/images/wrap_ban04.jpg"/>
+            <img src="@/assets/images/wrap_ban04.jpg" />
           </li>
         </ul>
       </small-ban>
@@ -131,12 +153,17 @@
 </template>
 
 <script>
-import SmallBan from '@/components/SmallBan'
+import SmallBan from "@/components/SmallBan";
 
 export default {
   name: "NewsTab",
   components: {
-    SmallBan
+    SmallBan,
+  },
+  data() {
+    return {
+      selected: "1",
+    };
   },
   methods: {
     tabSwitch: function (index, event) {
@@ -147,48 +174,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/css/variable.scss';
-@import '@/assets/css/mixin.scss';
+@import "@/assets/css/variable.scss";
+@import "@/assets/css/mixin.scss";
 
+.is-selected {
+  margin-bottom: 0 !important;
+}
+.mint-cell-wrapper {
+  padding: 0 !important;
+}
 .fib_sckx {
-  ::v-deep .nut-tab {
-    border: none;
-    padding: 0;
-    .nut-tab-item {
-      padding: 10px 0 0 0;
-      height: auto;
+  .nav-bar {
+    background: $mainColor;
+  }
+  .mint-navbar {
+    ::v-deep .mint-tab-item-label {
+      @include title;
     }
-    .nav-bar {
-      background: $mainColor;
+  }
+  .newsList {
+    .title {
+      display: inline-block;
+      width: 65%;
+      @include ellipse;
     }
-    .nut-title-nav {
-      a {
-        @include title;
-      }
-    }
-    .newsList {
-        .title {
-          display: inline-block;
-          width: 76%;
-          @include ellipse;
-        }
-    }
-    .nut-tab-active {
+  }
+  .is-selected {
+    color: $mainColor;
+    a {
       color: $mainColor;
-        a {
-          color: $mainColor;
-        }
     }
-    li {
-      height: 0.8rem;
-      line-height: 0.8rem;
-      font-size: 0.26rem;
-      a {
-        display: flex;
-        justify-content: space-between;
-        .date {
-          font-size: .2rem;
-        }
+  }
+  .mint-cell-wrapper {
+    padding: 0;
+  }
+  li {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.26rem;
+    a {
+      display: flex;
+      justify-content: space-between;
+      .date {
+        width: 30%;
+        font-size: 0.2rem;
       }
     }
   }

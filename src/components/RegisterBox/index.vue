@@ -249,30 +249,22 @@
                   </li>
                   <!-- <li>
                     <div class="controls">
-                      <div class="controls_wrap">
-                        <mt-field
-                          class="birthday"
-                          label="生日"
-                          placeholder="生日"
-                          type="date"
-                          v-model="birthday"
-                        ></mt-field>
-                      </div>
+                      <birth-select :formData="birthData" />
                     </div>
                   </li> -->
                   <li>
                     <div class="controls">
-                      <form-select :formData="areaData" />
+                      <area-select :formData="areaData" />
                     </div>
                   </li>
                   <li>
                     <div class="controls">
-                      <form-select :formData="eduData" />
+                      <single-select :formData="eduData" />
                     </div>
                   </li>
                   <li>
                     <div class="controls">
-                      <form-select :formData="workData" />
+                      <single-select :formData="workData" />
                     </div>
                   </li>
                   <li>
@@ -288,7 +280,7 @@
                   </li>
                   <li>
                     <div class="controls">
-                      <form-select :formData="salaryData" />
+                      <single-select :formData="salaryData" />
                     </div>
                   </li>
                   <li>
@@ -345,11 +337,15 @@
 
 <script>
 import area from "@/assets/utils/area";
-import FormSelect from "@/components/FormSelect";
+import SingleSelect from "@/components/FormSelect/singleSelect";
+import AreaSelect from "@/components/FormSelect/areaSelect";
+// import BirthSelect from "@/components/FormSelect/birthSelect";
 export default {
   name: "LoginBox",
   components: {
-    FormSelect,
+    SingleSelect,
+    AreaSelect ,
+    // BirthSelect
   },
   data() {
     return {
@@ -394,6 +390,17 @@ export default {
           },
         ],
       },
+      // birthData: {
+      //   placeholder: "请选择出生年份",
+      //   formValue: "",
+      //   slotsday: slotsday,
+      //   showtime: true,
+      //   changeDate: {
+      //     startTime: ["2009年", "1月", "1日"],
+      //     finishTime: ["2009年", "1月", "1日"],
+      //   },
+      //   slots: [],
+      // },
       areaData: {
         placeholder: "请选择现居住地",
         province: "", //省
