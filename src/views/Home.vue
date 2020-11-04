@@ -8,7 +8,7 @@
         <divide />
         <morning-report />
         <divide />
-        <news-tab />
+        <tab-component />
         <divide />
         <deal-tab />
         <divide />
@@ -27,7 +27,7 @@ import Swiper from "@/components/Swiper";
 import Icon from "@/components/Icon";
 import Divide from "@/components/Divide";
 import MorningReport from "@/components/MorningReport";
-import NewsTab from "@/components/NewsTab";
+import TabComponent from "@/components/TabComponent";
 import DealTab from "@/components/DealTab";
 import ProNav from "@/components/ProNav";
 import CommonFooter from "@/components/CommonFooter";
@@ -40,7 +40,7 @@ export default {
     Icon,
     Divide,
     MorningReport,
-    NewsTab,
+    TabComponent,
     DealTab,
     ProNav,
     CommonFooter
