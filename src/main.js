@@ -5,7 +5,6 @@ import store from './store'
 
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import axios from 'axios'
-import './mock.js'
 
 import '@/assets/css/iconfont.css'
 import 'swiper/swiper-bundle.css'

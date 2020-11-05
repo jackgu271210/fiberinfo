@@ -2,144 +2,19 @@
   <div class="fib_sckx">
     <div class="cen_er">
       <mt-navbar v-model="selected">
-        <mt-tab-item id="1">市场快讯</mt-tab-item>
-        <mt-tab-item id="2">石化动态</mt-tab-item>
-        <mt-tab-item id="3">油市综合</mt-tab-item>
-        <mt-tab-item id="4">焦点关注</mt-tab-item>
+        <mt-tab-item id="1" v-for="item in newsData" :key="item.index">{{item}}</mt-tab-item>
       </mt-navbar>
 
       <mt-tab-container v-model="selected">
         <mt-tab-container-item id="1">
           <mt-cell>
             <ul class="newsList">
-              <li>
+              <li v-for="item in newsData" :key="item.index">
                 <a href="javascript:;">
                   <span class="title"
                     >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
                   >
                   <span class="date">2019-09-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
-                  >
-                  <span class="date">2019-09-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
-                  >
-                  <span class="date">2019-09-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
-                  >
-                  <span class="date">2019-09-04</span>
-                </a>
-              </li>
-            </ul>
-          </mt-cell>
-        </mt-tab-container-item>
-        <mt-tab-container-item id="2">
-          <mt-cell>
-            <ul class="newsList">
-              <li>
-                <a href="javascript:;">
-                  <span class="title">中天合创PP装置报道</span>
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">中天合创PP装置报道</span>
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">中天合创PP装置报道</span>
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">中天合创PP装置报道</span>
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-            </ul>
-          </mt-cell>
-        </mt-tab-container-item>
-        <mt-tab-container-item id="3">
-          <mt-cell>
-            <ul class="newsList">
-              <li>
-                <a href="javascript:;">
-                  <span class="title">WTI原油期货8点报盘</span>
-                  <span class="date">2020-11-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">WTI原油期货8点报盘</span>
-                  <span class="date">2020-11-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">WTI原油期货8点报盘</span>
-                  <span class="date">2020-11-04</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title">WTI原油期货8点报盘</span>
-                  <span class="date">2020-11-04</span>
-                </a>
-              </li>
-            </ul>
-          </mt-cell>
-        </mt-tab-container-item>
-        <mt-tab-container-item id="4">
-          <mt-cell>
-            <ul class="newsList">
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >美国大选结果即将揭晓！特朗普还是拜登？对纺织产业影响几何？</span
-                  >
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >美国大选结果即将揭晓！特朗普还是拜登？对纺织产业影响几何？</span
-                  >
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >美国大选结果即将揭晓！特朗普还是拜登？对纺织产业影响几何？</span
-                  >
-                  <span class="date">2020-11-03</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span class="title"
-                    >美国大选结果即将揭晓！特朗普还是拜登？对纺织产业影响几何？</span
-                  >
-                  <span class="date">2020-11-03</span>
                 </a>
               </li>
             </ul>
@@ -168,6 +43,9 @@ export default {
   components: {
     SmallBan,
   },
+  props: [
+    'newsData'
+  ],
   data() {
     return {
       selected: "1",

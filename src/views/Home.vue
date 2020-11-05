@@ -8,9 +8,8 @@
         <divide />
         <morning-report />
         <divide />
-        <tab-component />
+        <tab-component :newsData='newsList'/>
         <divide />
-        <deal-tab />
         <divide />
         <pro-nav />
         <common-footer />
@@ -28,7 +27,6 @@ import Icon from "@/components/Icon";
 import Divide from "@/components/Divide";
 import MorningReport from "@/components/MorningReport";
 import TabComponent from "@/components/TabComponent";
-import DealTab from "@/components/DealTab";
 import ProNav from "@/components/ProNav";
 import CommonFooter from "@/components/CommonFooter";
 
@@ -41,16 +39,19 @@ export default {
     Divide,
     MorningReport,
     TabComponent,
-    DealTab,
     ProNav,
     CommonFooter
   },
   data() {
     return {
-      listData: [],
+      newsList: [],
     };
   },
   mounted() {
+    this.$axios.get('http://localhost:8081/news.json',{}).then(res => {
+      this.newsList = res.data.data.newsData[0].newsList;
+      console.log(this.newsList);
+    });
     this.$nextTick(()=>{
       setTimeout(()=> {
         this.scroll = new BScroll(this.$refs.wrapper, {click: true});
