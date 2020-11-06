@@ -3,17 +3,19 @@
     <common-header />
     <div class="wrapper" ref="wrapper">
       <div>
-        <swiper />
+        <swiper :bannerData="bannerList" />
         <icon />
         <divide />
         <morning-report />
         <divide />
-        <tab-component :newsData='newsList'/>
+        <tab-component :newsData="newsList" />
         <divide />
+        <tab-component :newsData="serviceList" />
         <divide />
         <pro-nav />
-        <common-footer />
+        <space />
       </div>
+      <common-footer />
     </div>
   </div>
 </template>
@@ -28,6 +30,7 @@ import Divide from "@/components/Divide";
 import MorningReport from "@/components/MorningReport";
 import TabComponent from "@/components/TabComponent";
 import ProNav from "@/components/ProNav";
+import Space from '@/components/Space'
 import CommonFooter from "@/components/CommonFooter";
 
 export default {
@@ -40,23 +43,34 @@ export default {
     MorningReport,
     TabComponent,
     ProNav,
-    CommonFooter
+    Space,
+    CommonFooter,
   },
   data() {
     return {
+      bannerList: [],
       newsList: [],
+      serviceList: [],
     };
   },
   mounted() {
-    this.$axios.get('http://localhost:8081/news.json',{}).then(res => {
-      this.newsList = res.data.data.newsData[0].newsList;
+    this.$axios.get("/banner.json", {}).then((res) => {
+      this.bannerList = res.data.data.bannerList;
+      console.log(this.bannerList);
+    });
+    this.$axios.get("/news.json", {}).then((res) => {
+      this.newsList = res.data.data.newsList;
       console.log(this.newsList);
     });
-    this.$nextTick(()=>{
-      setTimeout(()=> {
-        this.scroll = new BScroll(this.$refs.wrapper, {click: true});
-      },1000)
-    })
+    this.$axios.get("/service.json", {}).then((res) => {
+      this.serviceList = res.data.data.serviceList;
+      console.log(this.serviceList);
+    });
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.scroll = new BScroll(this.$refs.wrapper, { click: true });
+      }, 1000);
+    });
   },
 };
 </script>

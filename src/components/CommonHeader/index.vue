@@ -16,10 +16,13 @@
                 </router-link>
             </div>
       </div>
-      <div class="burger">
+      <div class="burger" @click="showSidebar">
           <div class="x"></div>
           <div class="y"></div>
           <div class="z"></div>
+      </div>
+      <div class="nav_menu" v-if="navIsShow">
+
       </div>
   </div>
 </template>
@@ -34,6 +37,15 @@ export default {
 .header {
     position: relative;
 	width: 100%;
-	background-color: #0bf;
+    background-color: #0bf;
+    .top_box {
+        .search {
+            display: flex;
+            align-items: center;
+            .iconsousuo {
+                padding: .2rem .4rem;
+            }
+        }
+    }  
 }
 </style>

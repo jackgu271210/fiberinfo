@@ -1,7 +1,7 @@
 <template>
   <swiper ref="mySwiper" :options="swiperOptions">
-    <swiper-slide v-for="(item,index) in swiperPics" :key="index">
-      <img :src="item">
+    <swiper-slide v-for="(item,index) in bannerData" :key="index">
+      <img :src="item.src" :title="item.title">
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
@@ -10,20 +10,17 @@
 <script>
   export default {
     name: 'carrousel',
+    props: ['bannerData'],
     data() {
       return {
         swiperOptions: {
           pagination: {
             el: '.swiper-pagination',
           },
-          loop: true
+          loop: true,
+          autoplay: true
           // Some Swiper option/callback...
-        },
-        swiperPics: [
-          "http://www.fibreinfo.com//uploadpic/ad/service1_201961413583472072.jpg",
-          "http://www.fibreinfo.com//uploadpic/ad/service1_201911113462496282.jpg",
-          "http://www.fibreinfo.com//uploadpic/ad/service1_201911113453825629.jpg"
-        ]
+        }
       }
     },
     computed: {

@@ -1,0 +1,27 @@
+{
+    "data": {
+        "statusCode": "0",
+        "bannerList": [
+            {   
+                "id": "001",
+                "title": "扫码软件",
+                "src": "http://test.hzjshx.com/images/banner_01.jpg"
+            },
+            {   
+                "id": "002",
+                "title": "润聚祥",
+                "src": "http://test.hzjshx.com/images/banner_02.jpg"
+            },
+            {   
+                "id": "003",
+                "title": "富邦机械",
+                "src": "http://test.hzjshx.com/images/banner_03.jpg"
+            },
+            {   
+                "id": "004",
+                "title": "福瑞祥",
+                "src": "http://test.hzjshx.com/images/banner_04.jpg"
+            }
+        ]
+    }
+}

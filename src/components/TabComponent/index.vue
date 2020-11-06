@@ -2,19 +2,17 @@
   <div class="fib_sckx">
     <div class="cen_er">
       <mt-navbar v-model="selected">
-        <mt-tab-item id="1" v-for="item in newsData" :key="item.index">{{item}}</mt-tab-item>
+        <mt-tab-item :id="item.id" v-for="item in newsData" :key="item.index">{{item.title}}</mt-tab-item>
       </mt-navbar>
 
       <mt-tab-container v-model="selected">
-        <mt-tab-container-item id="1">
+        <mt-tab-container-item :id="item.id" v-for="item in newsData" :key="item.index">
           <mt-cell>
             <ul class="newsList">
-              <li v-for="item in newsData" :key="item.index">
+              <li v-for="subitem in item.list" :key="subitem.index">
                 <a href="javascript:;">
-                  <span class="title"
-                    >PP粉料小结：市场窄幅上调，预计近期PP粉料市场会有窄幅波动</span
-                  >
-                  <span class="date">2019-09-04</span>
+                  <span class="title">{{subitem.desc}}</span>
+                  <span class="date">{{subitem.time}}</span>
                 </a>
               </li>
             </ul>
@@ -63,8 +61,11 @@ export default {
 @import "@/assets/css/variable.scss";
 @import "@/assets/css/mixin.scss";
 
-.is-selected {
-  margin-bottom: 0 !important;
+
+.mint-navbar .mint-tab-item.is-selected {
+    border-bottom: 1px solid $mainColor;
+    color:$mainColor;
+    margin-bottom: -1px;
 }
 ::v-deep .mint-cell-value {
   width: 100%;
@@ -80,6 +81,7 @@ export default {
     background: $mainColor;
   }
   .mint-navbar {
+    border-bottom: 1px solid #ccc;
     ::v-deep .mint-tab-item-label {
       @include title;
     }
@@ -102,7 +104,6 @@ export default {
   }
   li {
     position: relative;
-    height: 0.8rem;
     line-height: 0.8rem;
     font-size: 0.26rem;
     a {

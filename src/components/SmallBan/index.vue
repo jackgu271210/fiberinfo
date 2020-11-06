@@ -18,6 +18,7 @@ export default {
     justify-content: space-between;
     li {
       width: 48%;
+      height: auto;
       img {
         width: 100%;
       }
