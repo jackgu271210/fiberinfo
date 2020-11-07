@@ -1,6 +1,7 @@
 <template>
   <div id="home">
-    <common-header />
+    <nav-menu :open="navOpen"/>
+    <common-header @click="navOpen = false" @toggleNav="navOpen = !navOpen" />
     <div class="wrapper" ref="wrapper">
       <div>
         <swiper :bannerData="bannerList" />
@@ -23,6 +24,7 @@
 <script>
 import BScroll from "better-scroll";
 
+import NavMenu from '@/components/NavMenu'
 import CommonHeader from "@/components/CommonHeader";
 import Swiper from "@/components/Swiper";
 import Icon from "@/components/Icon";
@@ -36,6 +38,7 @@ import CommonFooter from "@/components/CommonFooter";
 export default {
   name: "Home",
   components: {
+    NavMenu,
     CommonHeader,
     Swiper,
     Icon,
@@ -48,6 +51,7 @@ export default {
   },
   data() {
     return {
+      navOpen: false,
       bannerList: [],
       newsList: [],
       serviceList: [],

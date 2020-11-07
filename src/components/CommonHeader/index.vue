@@ -16,13 +16,10 @@
                 </router-link>
             </div>
       </div>
-      <div class="burger" @click="showSidebar">
+      <div class="burger" @click="$emit('toggleNav')">
           <div class="x"></div>
           <div class="y"></div>
           <div class="z"></div>
-      </div>
-      <div class="nav_menu" v-if="navIsShow">
-
       </div>
   </div>
 </template>
