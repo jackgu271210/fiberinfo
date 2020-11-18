@@ -10,12 +10,18 @@ import '@/assets/css/iconfont.css'
 import 'swiper/swiper-bundle.css'
 import '@/assets/css/base.css'
 
+
+
 Vue.use(MintUI)
 
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
 Vue.use(VueAwesomeSwiper)
+
+import 'element-ui/lib/theme-chalk/index.css'
+import element from './element/index'
+Vue.use(element)
 
 Vue.prototype.$axios = axios
 
