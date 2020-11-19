@@ -3,14 +3,15 @@
       <a href="javascript:;" @click="$router.back()">
           <i class="iconfont back">&#xe683;</i>
       </a>
-    <span class="header_ti">登陆</span>
+    <span class="header_ti">{{title}}</span>
     <a href="/register" class="header_ti">注册</a>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'InnerHeader'
+    name: 'InnerHeader',
+    props: ['title']
 }
 </script>
 

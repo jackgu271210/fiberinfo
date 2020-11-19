@@ -1,6 +1,6 @@
 <template>
   <div id="register">
-    <inner-header />
+    <inner-header :title="title"/>
     <register-box />
     <space />
     <common-footer />
@@ -20,6 +20,11 @@ export default {
     RegisterBox,
     Space,
     CommonFooter,
+  },
+  data() {
+    return {
+      "title": "注册"
+    }
   }
 };
 </script>

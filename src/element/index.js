@@ -5,7 +5,8 @@ import {
   MenuItemGroup,
   Drawer,
   Select,
-  Option
+  Option,
+  Tag
 } from 'element-ui'
 const element = {
   install: function (Vue) {
@@ -16,6 +17,7 @@ const element = {
     Vue.use(Drawer)
     Vue.use(Select)
     Vue.use(Option)
+    Vue.use(Tag)
   }
 }
 export default element
