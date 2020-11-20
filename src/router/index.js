@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Search from '../views/Search.vue'
 import Supplier from '../views/Supplier.vue'
+import WebBuild from '../views/WebBuild.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/supplier',
     name: 'Supplier',
     component: Supplier
+  },
+  {
+    path: '/web_build',
+    name: 'WebBuild',
+    component: WebBuild
   }
 ]
 

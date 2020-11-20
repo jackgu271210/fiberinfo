@@ -243,7 +243,18 @@ input, textarea, button {
 .fr {
   float: right;
 }
-
+.icon_list li a.active {
+  color: #0493dc;
+}
+.icon_list li a.active i{
+  color: #0493dc;
+}
+.inner_title {
+  font-size: 18px;
+  text-align: center;
+  color: #015cc8;
+  margin-bottom: 20px;
+}
 .cen_er {
   padding: .28rem;
 }

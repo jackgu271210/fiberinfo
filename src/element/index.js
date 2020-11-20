@@ -6,7 +6,9 @@ import {
   Drawer,
   Select,
   Option,
-  Tag
+  Tag,
+  Tabs,
+  TabPane
 } from 'element-ui'
 const element = {
   install: function (Vue) {
@@ -18,6 +20,8 @@ const element = {
     Vue.use(Select)
     Vue.use(Option)
     Vue.use(Tag)
+    Vue.use(Tabs)
+    Vue.use(TabPane)
   }
 }
 export default element
